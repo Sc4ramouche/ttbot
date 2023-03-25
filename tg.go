@@ -20,10 +20,6 @@ func ConnectToTGBot() {
 
 	bot.Debug = true
 
-	// it's super naive to just use hardcoded id, but for now it serves the
-	// purpose. Ideally, I should store the list of users who had interacted
-	// with the bot in database.
-	// SQLite could be a good fit here.
 	msg := tgbotapi.NewMessage(id, "The enrollment link is available:\nhttps://sttkberlin.de/trainingszeiten/")
 	bot.Send(msg)
 }
